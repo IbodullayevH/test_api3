@@ -1,11 +1,12 @@
 const { DataSource } = require("typeorm");
+const userSchema = require("../entity/usersModel");
+const productSchema = require("../entity/productModel");
 require(`dotenv`).config()
-const entities = require(`../entity`)
 
 const AppDataSource = new DataSource({
     type: "postgres",
     url:process.env.URL, // Connection String
-    entities: entities,
+    entities: [userSchema, productSchema],
     synchronize: false,
     logging: false,
   });

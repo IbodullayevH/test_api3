@@ -4,7 +4,7 @@ const AppDataSource = require("../config/typeorm");
 // Superadmin get all users
 const getAllUsers = async (req, res) => {
   try {
-    const userRepository = AppDataSource.getRepository("userModel")
+    const userRepository = AppDataSource.getRepository("Users_Table")
     const allUsers = await userRepository.find();
 
     return res.status(200).send({
@@ -25,7 +25,7 @@ const registerUser = async (req, res) => {
   try {
     let { fullName, email, password, adress, phone, userName } = req.body;
 
-    const userRepository = AppDataSource.getRepository("userModel");
+    const userRepository = AppDataSource.getRepository("Users_Table");
     const existUsers = await userRepository.find({ where: { userName } });
 
     if (existUsers.length !== 0) {

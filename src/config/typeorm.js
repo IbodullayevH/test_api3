@@ -7,8 +7,8 @@ const AppDataSource = new DataSource({
     type: "postgres",
     url:process.env.URL, // Connection String
     entities: [userSchema, productSchema],
-    synchronize: false,
-    logging: false,
+    synchronize: true,
+    logging: true,
   });
 
 

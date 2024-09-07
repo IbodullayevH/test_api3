@@ -1,3 +1,4 @@
+require(`reflect-metadata`)
 const express = require(`express`)
 const AppDataSource = require("./config/typeorm")
 const router = require("./routes")

@@ -5,7 +5,8 @@ const { EntitySchema } = require("typeorm");
 
 // Users
 const userModel = new EntitySchema({
-  name: "UserTable", // Jadval nomi
+  name: "userModel",
+  tableName:"Users_Table",
   columns: {
     id: {
       primary: true,

@@ -1,10 +1,10 @@
 const AppDataSource = require("../config/typeorm");
-const { userModel } = require("../entity");
+
 
 // Superadmin get all users
 const getAllUsers = async (req, res) => {
   try {
-    const userRepository = AppDataSource.getRepository(userModel);
+    const userRepository = AppDataSource.getRepository("userModel")
     const allUsers = await userRepository.find();
 
     return res.status(200).send({
@@ -25,7 +25,7 @@ const registerUser = async (req, res) => {
   try {
     let { fullName, email, password, adress, phone, userName } = req.body;
 
-    const userRepository = AppDataSource.getRepository(userModel);
+    const userRepository = AppDataSource.getRepository("userModel");
     const existUsers = await userRepository.find({ where: { userName } });
 
     if (existUsers.length !== 0) {

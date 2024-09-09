@@ -2,15 +2,15 @@ const { EntitySchema } = require("typeorm");
 
 const userSchema = new EntitySchema({
   name: "users",
-
+  
   columns: {
     id: {
       primary: true,
       type: "int",
-      generated: true, // Avtomatik ravishda ID yaratadi
+      generated: true,
     },
     fullName: {
-      type: "text", // Bu ustun "varchar" turidagi ma'lumotni saqlaydi
+      type: "text",
       required: true,
     },
     email: {

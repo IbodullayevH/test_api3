@@ -1,10 +1,8 @@
-// model users
-
 const { EntitySchema } = require("typeorm");
 
 // Products
 const productSchema = new EntitySchema({
-  name: "Products", // Jadval nomi
+  name: "Products", 
   columns: {
     id: {
       primary: true,

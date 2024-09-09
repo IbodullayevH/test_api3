@@ -11,7 +11,7 @@ const AppDataSource = new DataSource({
   synchronize: false,
   logging: false,
   ssl: {
-    rejectUnauthorized: false, // SSL sertifikatini tekshirmaslik uchun
+    rejectUnauthorized: false, 
   },
 });
 

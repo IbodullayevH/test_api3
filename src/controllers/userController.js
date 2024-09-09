@@ -21,6 +21,7 @@ const getAllUsers = async (req, res) => {
   }
 };
 
+
 // register
 const registerUser = async (req, res) => {
   try {

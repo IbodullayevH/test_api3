@@ -7,7 +7,7 @@ require(`dotenv`).config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-
+  
 // The database is connected via typeorm
 AppDataSource.initialize()
   .then(() => {

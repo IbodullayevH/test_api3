@@ -14,7 +14,7 @@ AppDataSource.initialize()
     console.log(`The database is connected via typeorm`);
   })
   .catch((err) => {
-    console.log(`AppdataSource:  ${err}`);
+    console.log(`AppdataSource: ${err}`);
   });
 
   
@@ -24,5 +24,5 @@ app.use(router);
 //port listening
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-  console.log(`server run on port ${port}`);
+  console.log(`serveir run on port ${port}`);
 });

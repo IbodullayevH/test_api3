@@ -5,7 +5,7 @@ const userSchema = require("../entity/usersModel");
 // Superadmin get all users
 const getAllUsers = async (req, res) => {
   try {
-    const userRepository = AppDataSource.getRepository("users")
+    const userRepository = AppDataSource.getRepository("userM0del")
     const allUsers = await userRepository.find();
 
     return res.status(200).send({
@@ -27,7 +27,7 @@ const registerUser = async (req, res) => {
   try {
     let { fullName, email, password, adress, phone, userName } = req.body;
 
-    const userRepository = AppDataSource.getRepository("users");
+    const userRepository = AppDataSource.getRepository("userM0del");
     const existUsers = await userRepository.find({ where: { userName } });
 
     if (existUsers.length !== 0) {
